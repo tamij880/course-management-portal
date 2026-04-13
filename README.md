@@ -100,7 +100,7 @@ Admin
 
 
  ### 📂 Project structure
-alfa-coaching-portal/
+The Course Management portal/
 ├── frontend/   # React frontend
 ├── backend/    # Node.js + Express backend
 ├── models/     # MongoDB schemas
