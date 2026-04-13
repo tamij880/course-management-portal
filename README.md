@@ -1,6 +1,6 @@
-# Alfa Coaching Portal
+# The Course Management Portal
 
-Alfa Coaching Portal is a full-stack educational web platform built with **React, Node.js, Express, and MongoDB**.  
+The Course Management Portal is a full-stack educational web platform built with **React, Node.js, Express, and MongoDB**.  
 It provides students with study materials, notes, guides, and online exams.
 
 ---
@@ -100,7 +100,7 @@ Admin
 
 
  ### 📂 Project structure
-alfa-coaching-portal/
+The Course Management portal/
 ├── frontend/   # React frontend
 ├── backend/    # Node.js + Express backend
 ├── models/     # MongoDB schemas
