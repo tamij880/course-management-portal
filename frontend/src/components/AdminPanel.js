@@ -72,7 +72,12 @@ function AdminPanel() {
 
   return (
     <div className="container mt-4">
-      <h2>Admin Panel</h2>
+      {/* ✅ Styled Welcome Message */}
+      <div className="alert alert-success text-center" role="alert">
+        <h2 className="mb-0">Welcome to Course Management Admin Panel</h2>
+        <p className="mb-0">Manage uploaded study materials with full control from here.</p>
+      </div>
+
       <form onSubmit={handleAddMaterial} className="mb-4">
         <div className="mb-3">
           <label>Title</label>
@@ -162,6 +167,12 @@ function AdminPanel() {
           </li>
         ))}
       </ul>
+
+      {/* ✅ Footer */}
+      <footer className="mt-5 text-center text-secondary">
+        <hr />
+        <p>© {new Date().getFullYear()} The Department Management Control. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

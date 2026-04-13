@@ -1,7 +1,7 @@
 // src/components/Navbar.js
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode"; // ✅ named import
+import { jwtDecode } from "jwt-decode"; // keeping your import style as-is
 
 function Navbar() {
   const navigate = useNavigate();
@@ -26,7 +26,10 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Alfa Coaching</Link>
+        {/* ✅ Changed brand name */}
+        <Link className="navbar-brand" to="/">
+          The Department Course Management Portal
+        </Link>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
             {/* Always show Home */}

@@ -2,12 +2,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 function Home() {
   return (
     <div className="container mt-5">
       <header className="text-center mb-4">
-        <h1>WELCOME TO ALFA COACHING CENTER</h1>
+        <h1>WELCOME TO THE DEPARTMENT COURSE MANAGEMENT PORTAL</h1>
         <p className="lead">"Empowering students with quality materials"</p>
       </header>
 
@@ -19,7 +18,7 @@ function Home() {
       <section className="card p-4">
         <h4>About Us:</h4>
         <p>We provide study materials for all subjects. Students can access notes, guides, and exams online.</p>
-        <p className="text-muted">@ 2025 Alfa Coaching Center</p>
+        <p className="text-muted">© {new Date().getFullYear()} The Department Course Management Portal</p>
       </section>
     </div>
   );

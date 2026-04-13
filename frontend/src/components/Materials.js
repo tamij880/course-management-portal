@@ -59,6 +59,7 @@ function Materials() {
         </div>
       ))}
 
+      {/* ✅ Footer */}
       <footer className="mt-5 text-center text-muted">
         <hr />
         <p><strong>FOR SPONSORSHIP</strong></p>
@@ -66,7 +67,7 @@ function Materials() {
           <strong>About Us:</strong> We provide study materials for all subjects.
           Students can access notes, guides, and exams online.
         </p>
-        <p>© 2025 Alfa Coaching Center</p>
+        <p>© {new Date().getFullYear()} The Department Course Management Portal</p>
       </footer>
     </div>
   );

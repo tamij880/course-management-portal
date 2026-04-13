@@ -1,3 +1,4 @@
+// src/components/Dashboard.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
@@ -27,7 +28,11 @@ function Dashboard() {
 
   return (
     <div className="container mt-4">
-      <h2>Welcome, {role === "admin" ? "Admin" : "Student"}</h2>
+      {/* Updated welcome message */}
+      <h2>
+        Welcome to The Department Course Management Portal —{" "}
+        {role === "admin" ? "Admin" : "Student"}
+      </h2>
 
       <div className="row">
         {materials.map((m) => (
@@ -50,6 +55,7 @@ function Dashboard() {
         ))}
       </div>
 
+      {/* Updated footer */}
       <footer className="mt-5 text-center text-muted">
         <hr />
         <p><strong>FOR SPONSORSHIP</strong></p>
@@ -57,7 +63,7 @@ function Dashboard() {
           <strong>About Us:</strong> We provide study materials for all subjects.
           Students can access notes, guides, and exams online.
         </p>
-        <p>© 2025 Alfa Coaching Center</p>
+        <p>© 2026 The Department Course Management Portal</p>
       </footer>
     </div>
   );
