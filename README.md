@@ -17,7 +17,7 @@ It provides students with study materials, notes, guides, and online exams.
 ---
 
 ## 🌐 Live Demo Link
-- **Frontend (React - Vercel)**: [https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app/](https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app/pp)
+- **Frontend (React - Vercel)**: [https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app](https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app)
 
 
 ---
