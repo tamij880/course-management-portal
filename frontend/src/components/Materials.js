@@ -1,6 +1,7 @@
 // src/components/Materials.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config";   // ✅ Import the central config
 
 function Materials() {
   const [materials, setMaterials] = useState([]);
@@ -8,7 +9,7 @@ function Materials() {
 
   useEffect(() => {
     axios
-      .get("/api/materials", {
+      .get(`${API_BASE_URL}/materials`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMaterials(res.data))

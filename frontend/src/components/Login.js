@@ -1,7 +1,9 @@
+// src/components/Login.js
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode"; // ✅ named import
+import API_BASE_URL from "../config";   // ✅ Import the central config
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,7 +15,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/auth/login`,
+        `${API_BASE_URL}/auth/login`,   // ✅ Use config.js base URL
         { email, password }
       );
       localStorage.setItem("token", res.data.token);

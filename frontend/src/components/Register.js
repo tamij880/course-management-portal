@@ -1,6 +1,8 @@
+// src/components/Register.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_BASE_URL from "../config";   // ✅ Import the central config
 
 function Register() {
   const [name, setName] = useState("");
@@ -13,7 +15,7 @@ function Register() {
     e.preventDefault();
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/auth/register`,
+        `${API_BASE_URL}/auth/register`,   // ✅ Use config.js base URL
         { name, email, password, role }
       );
       alert(`${role} registered successfully! Please login.`);

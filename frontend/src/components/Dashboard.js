@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import API_BASE_URL from "../config";   // ✅ Import the central config
 
 function Dashboard() {
   const [materials, setMaterials] = useState([]);
@@ -19,7 +20,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("/api/materials", {
+      .get(`${API_BASE_URL}/materials`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMaterials(res.data))
@@ -63,7 +64,7 @@ function Dashboard() {
           <strong>About Us:</strong> We provide study materials for all subjects.
           Students can access notes, guides, and exams online.
         </p>
-        <p>© 2026 The Department Course Management Portal</p>
+        <p>© {new Date().getFullYear()} The Department Course Management Portal</p>
       </footer>
     </div>
   );

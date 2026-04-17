@@ -1,6 +1,7 @@
 // src/components/AdminPanel.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config";   // ✅ Import the central config
 
 function AdminPanel() {
   const [materials, setMaterials] = useState([]);
@@ -13,7 +14,7 @@ function AdminPanel() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/materials", {
+      .get(`${API_BASE_URL}/materials`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMaterials(res.data))
@@ -41,7 +42,7 @@ function AdminPanel() {
       const directLink = convertDriveLink(fileUrl);
 
       const res = await axios.post(
-        "http://localhost:5000/api/materials",
+        `${API_BASE_URL}/materials`,
         { title, description, subject, fileUrl: directLink },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -61,7 +62,7 @@ function AdminPanel() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/materials/${id}`, {
+      await axios.delete(`${API_BASE_URL}/materials/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMaterials(materials.filter((m) => m._id !== id));
