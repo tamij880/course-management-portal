@@ -16,9 +16,15 @@ It provides students with study materials, notes, guides, and online exams.
 
 ---
 
+<<<<<<< HEAD
 ## 🌐 Live Demo Links
 - **Frontend (React - Vercel)**: [https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app/](https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app/pp)  
 - **Backend (Node.js - Render)**: [https://alfa-coaching-portal-1.onrender.com](https://alfa-coaching-portal-1.onrender.com)
+=======
+## 🌐 Live Demo Link
+- **Frontend (React - Vercel)**: [https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app](https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app)
+
+>>>>>>> 7fd913143fe0f166c7043b9cc8fde5226a2a1e48
 
 ---
 
