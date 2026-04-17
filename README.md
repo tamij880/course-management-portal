@@ -17,7 +17,7 @@ It provides students with study materials, notes, guides, and online exams.
 ---
 
 ## 🌐 Live Demo Links
-- **Frontend (React - Vercel)**: [https://alfa-coaching-portal.vercel.app](https://alfa-coaching-portal.vercel.app)  
+- **Frontend (React - Vercel)**: [https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app/](https://thedepartmentcoursemanagmentportal-tamijs-projects.vercel.app/pp)  
 - **Backend (Node.js - Render)**: [https://alfa-coaching-portal-1.onrender.com](https://alfa-coaching-portal-1.onrender.com)
 
 ---
@@ -100,7 +100,7 @@ Admin
 
 
  ### 📂 Project structure
-The Course Management portal/
+alfa-coaching-portal/
 ├── frontend/   # React frontend
 ├── backend/    # Node.js + Express backend
 ├── models/     # MongoDB schemas

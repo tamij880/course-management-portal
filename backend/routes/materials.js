@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Material = require("../models/Material");
 const authMiddleware = require("../middleware/auth");
+const path = require("path");
 
 // GET all materials
 router.get("/", authMiddleware, async (req, res) => {
@@ -42,7 +43,7 @@ router.put("/:id", authMiddleware, async (req, res) => {
     const updated = await Material.findByIdAndUpdate(
       req.params.id,
       { title, description, subject, fileUrl },
-      { new: true } // ✅ return updated document
+      { new: true }
     );
 
     res.json(updated);
@@ -62,6 +63,27 @@ router.delete("/:id", authMiddleware, async (req, res) => {
     res.json({ message: "Material deleted" });
   } catch (err) {
     res.status(500).json({ message: "Delete failed" });
+  }
+});
+
+// ✅ PREVIEW route (inline open in browser)
+router.get("/:id/preview", authMiddleware, async (req, res) => {
+  try {
+    const material = await Material.findById(req.params.id);
+    if (!material) {
+      return res.status(404).json({ message: "Material not found" });
+    }
+
+    // Force inline display instead of download
+    res.setHeader("Content-Disposition", "inline");
+
+    // If fileUrl is a local path on your server
+    res.sendFile(path.resolve(material.fileUrl));
+
+    // If fileUrl is external (like S3/Google Drive), use redirect:
+    // res.redirect(material.fileUrl);
+  } catch (err) {
+    res.status(500).json({ message: "Preview failed" });
   }
 });
 
